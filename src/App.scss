@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 16px;
+}
+
+@media (min-width: 1200px) {
+  .App {
+    padding: 16px 32px;
+  }
+}

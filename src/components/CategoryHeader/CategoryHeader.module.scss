@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+}
+
+@media (min-width: 1024) {
+  .itemsCount {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.itemsCount {
+  color: gray;
+  font-size: 14px;
+  line-height: 20px;
+}

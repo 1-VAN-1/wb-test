@@ -1,0 +1,15 @@
+.catalog {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.products {
+  width: 80%;
+}
+
+@media (max-width: 1024px) {
+  .products {
+    width: 100%;
+  }
+}

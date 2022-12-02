@@ -1,0 +1,22 @@
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 20%;
+}
+
+.filter {
+  .active {
+  }
+
+  width: 100%;
+}
+
+.filter-title {
+}
+
+@media (max-width: 1024px) {
+  .filter-list {
+    display: none;
+  }
+}

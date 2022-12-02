@@ -1,0 +1,40 @@
+.sort-by {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.title {
+  color: gray;
+  font-size: 13px;
+}
+
+.sorting-list {
+  font-size: 14px;
+  line-height: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  li {
+    border-bottom: 1px dashed #8b8b8b;
+    text-decoration: none;
+  }
+
+  li.active {
+    color: #cb11ab;
+    border-color: #cb11ab;
+  }
+
+  li:hover {
+    color: #cb11ab;
+    border-color: #cb11ab;
+    cursor: pointer;
+  }
+}
