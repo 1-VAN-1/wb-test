@@ -1,14 +1,15 @@
+@import '/src/styles/abstracts/colors';
+
 .sort-by {
   margin-left: 25px;
   display: flex;
   flex-direction: row;
   gap: 20px;
-  margin-bottom: 30px;
   align-items: center;
 }
 
 .title {
-  color: gray;
+  color: $link;
   font-size: 13px;
 }
 

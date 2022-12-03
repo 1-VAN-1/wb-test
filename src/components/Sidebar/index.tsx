@@ -2,7 +2,7 @@ import styles from './SideBar.module.scss';
 
 function Sidebar() {
   return (
-    <div className={styles['filter-list']}>
+    <aside className={styles['filter-list']}>
       <div>Категория</div>
       <div>Срок доставки</div>
       <div>Бренд</div>
@@ -11,7 +11,7 @@ function Sidebar() {
       <div>Скидка</div>
       <div>Цвет</div>
       <div>Размер</div>
-    </div>
+    </aside>
   );
 }
 

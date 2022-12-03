@@ -1,0 +1,66 @@
+@import '/src/styles/abstracts/colors';
+
+.sorter,
+.sorter-mobile {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sorter-mobile {
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .sorter {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sorter-mobile {
+    display: none;
+  }
+}
+
+.select-filter {
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.select-filter::after {
+  content: '';
+  display: inline-block;
+  border: 4px solid transparent;
+  border-top: 0 solid transparent;
+  border-bottom: 5px solid #242424;
+  transform: rotate(180deg);
+  margin-left: 5px;
+}
+
+.card-sizes {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  filter: $link-filter;
+  width: 18px;
+  height: 18px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.active {
+  filter: $primary-filter;
+}
+
+.inactive {
+  display: none;
+}

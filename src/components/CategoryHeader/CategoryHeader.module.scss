@@ -1,3 +1,5 @@
+@import '/src/styles/abstracts/colors';
+
 .header {
   display: flex;
   flex-direction: row;
@@ -5,15 +7,27 @@
   align-items: baseline;
 }
 
-@media (min-width: 1024) {
-  .itemsCount {
+.items-count {
+  color: $link;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.title {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: inline;
+  padding-right: 16px;
+}
+
+@media (max-width: 1024px) {
+  .items-count {
     font-size: 12px;
     line-height: 16px;
   }
-}
 
-.itemsCount {
-  color: gray;
-  font-size: 14px;
-  line-height: 20px;
+  h1 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

@@ -1,17 +1,17 @@
 import Products from '@/components/Products';
 import Sidebar from '@/components/Sidebar';
-import SortBy from '@/components/SortBy';
+import ProductSorter from '@/components/ProductSorter';
 import styles from './Catalog.module.scss';
 
 function Catalog() {
   return (
-    <div className={styles.catalog}>
+    <section className={styles.catalog}>
       <Sidebar />
       <div className={styles.products}>
-        <SortBy />
+        <ProductSorter />
         <Products />
       </div>
-    </div>
+    </section>
   );
 }
 
