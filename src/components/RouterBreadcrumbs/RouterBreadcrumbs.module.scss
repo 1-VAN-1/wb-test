@@ -1,4 +1,4 @@
-@import '/src/styles/abstracts/colors';
+@use '/src/styles/abstracts/colors' as *;
 
 .router-breadcrumbs {
   display: flex;
