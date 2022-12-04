@@ -1,12 +1,12 @@
 import useProductFilters from '@/hooks/useProductFilters';
-import { ReactNode, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import CheckBoxSet from '@/components/UI/CheckBoxSet';
 import RadioButtonSet from '@/components/UI/RadioButtonSet';
 import RangeInput from '@/components/UI/RangeInput';
 import CategoryList from './CategoryList';
 import Filter from './Filter';
-import styles from './SideBar.module.scss';
 import ColorPicker from './ColorPicker';
+import styles from './SideBar.module.scss';
 
 function RadioSetFilter({ radioValues }: { radioValues: string[] }) {
   const [selected, setSelected] = useState<string | number | null>(null);

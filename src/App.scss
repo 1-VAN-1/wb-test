@@ -3,16 +3,12 @@
   flex-direction: column;
   gap: 24px;
   padding: 16px 16px;
-}
 
-@media (min-width: 1200px) {
-  .App {
+  @media (min-width: 1200px) {
     padding: 16px 32px;
   }
-}
 
-@media (max-width: 1200px) {
-  .App {
+  @media (max-width: 1200px) {
     gap: 12px;
   }
 }

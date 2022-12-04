@@ -10,8 +10,8 @@
 }
 
 .title {
-  color: $link;
   @extend %text-m;
+  color: $link;
 }
 
 .sorting-list {
@@ -26,16 +26,16 @@
   li {
     border-bottom: 1px dashed #8b8b8b;
     text-decoration: none;
-  }
 
-  li.active {
-    color: #cb11ab;
-    border-color: #cb11ab;
-  }
+    &.active {
+      color: #cb11ab;
+      border-color: #cb11ab;
+    }
 
-  li:hover {
-    color: #cb11ab;
-    border-color: #cb11ab;
-    cursor: pointer;
+    &:hover {
+      color: #cb11ab;
+      border-color: #cb11ab;
+      cursor: pointer;
+    }
   }
 }

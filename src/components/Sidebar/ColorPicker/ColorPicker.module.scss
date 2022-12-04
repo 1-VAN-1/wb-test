@@ -1,5 +1,13 @@
 @use '/src/styles/abstracts/colors' as *;
 
+%hover-shared {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
 .color-picker {
   display: inline-grid;
   grid-template-columns: auto auto auto auto auto;
@@ -13,39 +21,35 @@
   cursor: pointer;
   width: 30px;
   height: 30px;
-}
 
-.color > div {
-  position: relative;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-}
+  div {
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
 
-%hover-shared {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 50%;
-  background-color: transparent;
-}
+  &:hover {
+    div::before {
+      @extend %hover-shared;
+      width: 34px;
+      height: 34px;
+      top: calc(50% - 17px);
+      left: calc(50% - 17px);
+      border: 2px solid #fff;
+    }
+  }
 
-.color:hover > div::before {
-  @extend %hover-shared;
-  width: 30px;
-  height: 30px;
-  top: calc(50% - 17px);
-  left: calc(50% - 17px);
-  border: 2px solid #fff;
-}
-
-.color:hover > div::after {
-  @extend %hover-shared;
-  width: 34px;
-  height: 34px;
-  top: calc(50% - 19px);
-  left: calc(50% - 19px);
-  border: 2px solid $primary;
+  &:hover {
+    div::after {
+      @extend %hover-shared;
+      width: 38px;
+      height: 38px;
+      top: calc(50% - 19px);
+      left: calc(50% - 19px);
+      border: 2px solid $primary;
+    }
+  }
 }
 
 .beige {

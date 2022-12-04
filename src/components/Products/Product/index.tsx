@@ -7,7 +7,7 @@ function Product({ product }: { product: IProduct }) {
   return (
     <div className={styles.product}>
       <img
-        className={styles['product-image']}
+        className={styles['product__image']}
         src={product.image}
         alt={product.title}
       />
