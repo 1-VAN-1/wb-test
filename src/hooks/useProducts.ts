@@ -1,7 +1,7 @@
 import ProductService from '@/services/ProductService';
 import { useQuery } from '@tanstack/react-query';
 
-export default function useProducts() {
+export default function () {
   const getProducts = async () => {
     const response = await ProductService.fetchProducts();
 

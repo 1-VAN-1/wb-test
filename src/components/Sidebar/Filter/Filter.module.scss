@@ -1,0 +1,39 @@
+.filter {
+  position: relative;
+  padding-right: 15px;
+  user-select: none;
+}
+
+.filter-title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -1px;
+  top: 8px;
+  border-left: 2px solid #d5d5d5;
+  border-top: 2px solid #d5d5d5;
+  width: 6px;
+  height: 6px;
+  transform: rotate(-135deg);
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+
+.filter.expanded > .filter-title::after {
+  transform: rotate(45deg);
+}
+
+.filter-title {
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 12px;
+  display: none;
+}
+
+.filter.expanded > .container {
+  display: block;
+}

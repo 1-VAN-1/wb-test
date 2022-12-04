@@ -1,16 +1,21 @@
 @use '/src/styles/abstracts/colors' as *;
+@use '/src/styles/UI/text' as *;
 
 .sorter,
 .sorter-mobile {
   width: 100%;
-  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+.sorter {
+  margin-bottom: 30px;
+}
+
 .sorter-mobile {
   align-items: center;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1024px) {
@@ -32,6 +37,13 @@
   display: inline-flex;
   align-items: center;
   padding: 6px 0;
+}
+
+@media (max-width: 400px) {
+  .select-filter {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .select-filter::after {

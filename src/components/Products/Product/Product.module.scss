@@ -1,0 +1,155 @@
+@use '/src/styles/abstracts/colors' as *;
+@use '/src/styles/UI/buttons' as *;
+@use '/src/styles/UI/text' as *;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  align-content: center;
+  align-self: center;
+  justify-self: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 400px) {
+  .product {
+    width: 100%;
+  }
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.details {
+  margin-top: 10px;
+  color: $link;
+}
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+%bold-detail-shared {
+  font-weight: bold;
+  color: black;
+}
+
+.price {
+  @extend %bold-detail-shared;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.delivery-date {
+  @extend %bold-detail-shared;
+}
+
+.delivery,
+.rating-count {
+  @extend %text-m;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.stars-line {
+  width: 100px;
+  height: 16px;
+  background: url('/src/assets/stars.svg') center/auto 100% no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .stars-line {
+    width: 62px;
+    height: 10px;
+  }
+
+  .price {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .delivery-date {
+    font-weight: 600;
+  }
+}
+
+.star0 {
+  background-position-x: 100%;
+}
+
+.star1 {
+  background-position-x: 80%;
+}
+
+.star2 {
+  background-position-x: 60%;
+}
+
+.star3 {
+  background-position-x: 40%;
+}
+
+.star4 {
+  background-position-x: 20%;
+}
+
+.star5 {
+  background-position-x: 0%;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  height: 32px;
+  gap: 12px;
+}
+
+@media (min-width: 1024px) {
+  .buttons {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons {
+    gap: 2px;
+  }
+}
+
+.cart-btn {
+  @extend %btn-sm;
+  @extend %primary-btn;
+  height: 100%;
+  width: fit-content;
+}
+
+.postpone-btn {
+  @extend %flat-btn;
+  height: 32px;
+  width: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease 0s;
+  background-image: url('/src/assets/heart.svg');
+}
+
+.postpone-btn:hover {
+  background-image: url('/src/assets/heart-fill.svg');
+}

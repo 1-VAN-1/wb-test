@@ -1,0 +1,44 @@
+@use '../abstracts/colors' as *;
+
+%btn-shared {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+
+%flat-btn {
+  @extend %btn-shared;
+  background-color: transparent;
+  padding: 0;
+}
+
+%btn-sm {
+  font-size: 13px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 400px) {
+  %btn-sm {
+    font-size: 12px;
+  }
+}
+
+%primary-btn {
+  @extend %btn-shared;
+  color: white;
+  border: 2px solid $primary;
+  background-color: $primary;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+%primary-btn:hover {
+  filter: brightness(1.12);
+}
+
+%primary-btn:active {
+  filter: brightness(0.9);
+}

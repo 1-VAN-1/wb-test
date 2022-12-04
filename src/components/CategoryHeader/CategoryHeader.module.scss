@@ -1,4 +1,5 @@
 @use '/src/styles/abstracts/colors' as *;
+@use '/src/styles/UI/text' as *;
 
 .header {
   display: flex;
@@ -8,9 +9,8 @@
 }
 
 .items-count {
+  @extend %text-m;
   color: $link;
-  font-size: 14px;
-  line-height: 20px;
 }
 
 .title {
@@ -20,14 +20,9 @@
   padding-right: 16px;
 }
 
-@media (max-width: 1024px) {
-  .items-count {
-    font-size: 12px;
-    line-height: 16px;
-  }
-
-  h1 {
-    font-size: 18px;
-    line-height: 24px;
+@media (max-width: 400px) {
+  .header {
+    flex-direction: column;
+    gap: 4px;
   }
 }

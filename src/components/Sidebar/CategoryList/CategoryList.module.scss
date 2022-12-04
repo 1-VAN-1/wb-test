@@ -1,0 +1,22 @@
+@use '/src/styles/abstracts/colors' as *;
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 12px;
+}
+
+.category-header {
+  text-transform: none;
+  font-weight: 600;
+}
+
+.selected-category {
+  background-color: $primary;
+  color: white;
+  border-radius: 8px;
+  margin-top: 5px;
+  font-weight: 400;
+  padding: 3px 12px;
+}

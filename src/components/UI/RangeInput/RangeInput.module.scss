@@ -1,0 +1,33 @@
+@use '/src/styles/UI/form-input' as *;
+@use '/src/styles/UI/text' as *;
+
+.from-input,
+.to-input {
+  @extend %form-input;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.from-input {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.to-input {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.range-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-container {
+  width: 50%;
+}
+
+.label-text {
+  @extend %text-m;
+  color: #999;
+}
