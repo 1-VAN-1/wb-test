@@ -1,5 +1,6 @@
 @use '/src/styles/abstracts/colors' as *;
-@use '/src/styles/UI/text' as *;
+@use '/src/styles/abstracts/breakpoints' as *;
+@use 'sass:map';
 
 .header {
   display: flex;
@@ -7,14 +8,13 @@
   gap: 10px;
   align-items: baseline;
 
-  @media (max-width: 400px) {
+  @media (max-width: map.get($breakpoints, xs)) {
     flex-direction: column;
     gap: 4px;
   }
 }
 
 .items-count {
-  @extend %text-m;
   color: $link;
 }
 

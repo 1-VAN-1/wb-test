@@ -24,8 +24,10 @@ function SortBy() {
 
   return (
     <div className={styles['sort-by']}>
-      <span className={styles.title}>Сортировать по: </span>
-      <ul className={styles['sorting-list']}>
+      <span className={styles.title + ' text3 text4-big'}>
+        Сортировать по:{' '}
+      </span>
+      <ul className={styles['sorting-list'] + ' text3 text4-big'}>
         {sortings.map((sorting, index) => (
           <li
             key={sorting.name}

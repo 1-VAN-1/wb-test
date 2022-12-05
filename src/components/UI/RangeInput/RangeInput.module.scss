@@ -1,9 +1,8 @@
-@use '/src/styles/UI/form-input' as *;
-@use '/src/styles/UI/text' as *;
+@use '/src/styles/components/form-controls' as *;
 
 .from-input,
 .to-input {
-  @extend %form-input;
+  @extend .form-input;
   width: 100%;
   margin-top: 6px;
 }
@@ -28,6 +27,5 @@
 }
 
 .label-text {
-  @extend %text-m;
   color: #999;
 }

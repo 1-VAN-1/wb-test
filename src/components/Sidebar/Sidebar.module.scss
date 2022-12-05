@@ -1,7 +1,8 @@
 @use '/src/styles/abstracts/colors' as *;
-@use '/src/styles/UI/text-button' as *;
-@use '/src/styles/UI/form-input' as *;
-@use '/src/styles/UI/text' as *;
+@use '/src/styles/components/buttons' as *;
+@use '/src/styles/components/form-controls' as *;
+@use '/src/styles/abstracts/breakpoints' as *;
+@use 'sass:map';
 
 .text-button {
   @extend %text-button;
@@ -9,12 +10,11 @@
 }
 
 .search-input {
-  @extend %form-input;
+  @extend .form-input;
   width: 100%;
 }
 
 .reset-button {
-  @extend %text-m;
   @extend %text-button;
 
   display: none;
@@ -28,14 +28,12 @@
 }
 
 .sidebar {
-  @extend %text-l;
-
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 256px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: map.get($breakpoints, big)) {
     display: none;
   }
 }

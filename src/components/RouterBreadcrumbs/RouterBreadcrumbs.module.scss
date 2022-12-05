@@ -1,5 +1,6 @@
 @use '/src/styles/abstracts/colors' as *;
-@use '/src/styles/UI/text' as *;
+@use '/src/styles/abstracts/breakpoints' as *;
+@use 'sass:map';
 
 .router-breadcrumbs {
   display: flex;
@@ -14,18 +15,12 @@
   color: $link;
 
   a {
-    @extend %text-m;
     color: $link;
     text-decoration: none;
     cursor: default;
-
-    @media (max-width: 420px) {
-      font-size: 11px;
-      line-height: 18px;
-    }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: map.get($breakpoints, big)) {
     &::after {
       content: '/';
       margin-left: 8px;

@@ -1,5 +1,6 @@
 @use '/src/styles/abstracts/colors' as *;
-@use '/src/styles/UI/text' as *;
+@use '/src/styles/abstracts/breakpoints' as *;
+@use 'sass:map';
 
 .sorter,
 .sorter-mobile {
@@ -12,7 +13,7 @@
 .sorter {
   margin-bottom: 30px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: map.get($breakpoints, big)) {
     display: none;
   }
 }
@@ -21,14 +22,12 @@
   align-items: center;
   margin-bottom: 16px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: map.get($breakpoints, big)) {
     display: none;
   }
 }
 
 .select-filter {
-  font-size: 14px;
-  line-height: 20px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -42,11 +41,6 @@
     border-bottom: 5px solid #242424;
     transform: rotate(180deg);
     margin-left: 5px;
-  }
-
-  @media (max-width: 400px) {
-    font-size: 12px;
-    line-height: 16px;
   }
 }
 

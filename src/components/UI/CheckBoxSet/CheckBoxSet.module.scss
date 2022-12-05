@@ -1,7 +1,4 @@
-@use '/src/styles/UI/text' as *;
-
 .checkbox {
-  @extend %text-l;
   display: block;
   word-break: break-word;
   position: relative;

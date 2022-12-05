@@ -14,7 +14,7 @@ function RadioButtonSet({ values, selectedOption, setSelected }: IProps) {
           key={v.value}
           className={`${styles.radio} ${
             selectedOption === v.value ? styles.selected : ''
-          }`}
+          } + ' text2 text3-big'`}
           onClick={() => setSelected(v.value)}
         >
           {v.title}

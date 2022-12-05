@@ -1,8 +1,6 @@
 @use '/src/styles/abstracts/colors' as *;
-@use '/src/styles/UI/text' as *;
 
 .radio {
-  @extend %text-l;
   display: block;
   word-break: break-word;
   position: relative;

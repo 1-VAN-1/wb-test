@@ -1,0 +1,29 @@
+@use '/src/styles/abstracts/colors' as *;
+
+.form-input {
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 22px;
+  color: #242424;
+  padding: 6px 12px;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: inset 1px 0 0 $primary, inset 0 1px 0 $primary,
+      inset -1px 0 0 $primary, inset 0 -1px 0 $primary;
+  }
+
+  &::placeholder {
+    color: #c7c7c7;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #c7c7c7;
+  }
+
+  &::-moz-placeholder {
+    color: #c7c7c7;
+  }
+}

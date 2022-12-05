@@ -1,4 +1,6 @@
 @use '../abstracts/colors' as *;
+@use '/src/styles/abstracts/breakpoints' as *;
+@use 'sass:map';
 
 %btn-shared {
   cursor: pointer;
@@ -17,8 +19,11 @@
   font-size: 13px;
   line-height: 21px;
   letter-spacing: 0;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-weight: 600;
 
-  @media (max-width: 400px) {
+  @media (max-width: map.get($breakpoints, xs)) {
     font-size: 12px;
   }
 }
@@ -28,9 +33,6 @@
   color: white;
   border: 2px solid $primary;
   background-color: $primary;
-  padding: 3px 10px;
-  border-radius: 8px;
-  font-weight: 600;
 
   &:hover {
     filter: brightness(1.12);
@@ -38,5 +40,17 @@
 
   &:active {
     filter: brightness(0.9);
+  }
+}
+
+%text-button {
+  border-bottom: 1px dashed #8b8b8b;
+  width: fit-content;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    color: $primary;
+    border-color: $primary;
   }
 }

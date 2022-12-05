@@ -45,7 +45,9 @@ function ProductSorter() {
           src={grid1}
           onClick={() => setSize('big')}
         />
-        <div className={styles['select-filter']}>По популярности</div>
+        <div className={styles['select-filter'] + ' text3 text4-xs'}>
+          По популярности
+        </div>
         <img width="18px" height="18px" src={filter} />
       </div>
     </>

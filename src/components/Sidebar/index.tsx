@@ -20,9 +20,11 @@ function RadioSetFilter({ radioValues }: { radioValues: string[] }) {
         <>
           <span>Срок доставки</span>
           <span
-            className={`${styles['reset-button']} ${
-              selected !== null ? styles.show : ''
-            }`}
+            className={
+              `${styles['reset-button']} ${
+                selected !== null ? styles.show : ''
+              }` + ' text3 text4-big'
+            }
             onClick={(e) => {
               e.stopPropagation();
               setSelected(null);
@@ -55,7 +57,7 @@ function Sidebar() {
   } = useProductFilters();
 
   return (
-    <aside className={styles.sidebar}>
+    <aside className={styles.sidebar + ' text2 text3-big'}>
       <CategoryList />
       <div className={styles['filter-list']}>
         <Filter

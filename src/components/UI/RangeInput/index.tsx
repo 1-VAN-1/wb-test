@@ -1,16 +1,19 @@
 import styles from './RangeInput.module.scss';
 
+function Container({ label }: { label: string }) {
+  return (
+    <div className={styles['container']}>
+      <span className={styles['label-text'] + ' text3 text4-big'}>{label}</span>
+      <input className={styles['from-input']} type="text" />
+    </div>
+  );
+}
+
 function RangeInput() {
   return (
     <div className={styles['range-input']}>
-      <div className={styles['container']}>
-        <span className={styles['label-text']}>От</span>
-        <input className={styles['from-input']} type="text" />
-      </div>
-      <div className={styles['container']}>
-        <span className={styles['label-text']}>До</span>
-        <input className={styles['to-input']} type="text" />
-      </div>
+      <Container label="От" />
+      <Container label="До" />
     </div>
   );
 }

@@ -1,26 +1,29 @@
+@use '/src/styles/abstracts/breakpoints' as *;
+@use 'sass:map';
+
 .product-list {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
 
-  @media (min-width: 1440px) {
+  @media (min-width: map.get($breakpoints, xxl)) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: map.get($breakpoints, big)) {
     width: 100%;
     column-gap: 5px;
     row-gap: 24px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  @media (max-width: 860px) {
+  @media (max-width: map.get($breakpoints, medium)) {
     width: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: map.get($breakpoints, small)) {
     width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

@@ -1,6 +1,7 @@
 @use '/src/styles/abstracts/colors' as *;
-@use '/src/styles/UI/buttons' as *;
-@use '/src/styles/UI/text' as *;
+@use '/src/styles/components/buttons' as *;
+@use '/src/styles/abstracts/breakpoints' as *;
+@use 'sass:map';
 
 .product {
   display: flex;
@@ -8,12 +9,10 @@
   align-content: center;
   align-self: center;
   justify-self: center;
-  font-size: 14px;
-  line-height: 20px;
   width: 80%;
   height: 100%;
 
-  @media (max-width: 400px) {
+  @media (max-width: map.get($breakpoints, xs)) {
     width: 100%;
   }
 }
@@ -44,25 +43,14 @@
   @extend %bold-detail-shared;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 18px;
-
-  @media (max-width: 1024px) {
-    font-size: 14px;
-    line-height: 20px;
-  }
 }
 
 .delivery-date {
   @extend %bold-detail-shared;
 
-  @media (max-width: 1024px) {
+  @media (max-width: map.get($breakpoints, big)) {
     font-weight: 600;
   }
-}
-
-.delivery,
-.rating-count {
-  @extend %text-m;
 }
 
 .rating {
@@ -79,7 +67,7 @@
   height: 16px;
   background: url('/src/assets/stars.svg') center/auto 100% no-repeat;
 
-  @media (max-width: 1024px) {
+  @media (max-width: map.get($breakpoints, big)) {
     width: 62px;
     height: 10px;
   }
@@ -116,11 +104,11 @@
   height: 32px;
   gap: 12px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: map.get($breakpoints, big)) {
     display: none;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: map.get($breakpoints, xs)) {
     gap: 2px;
   }
 }
