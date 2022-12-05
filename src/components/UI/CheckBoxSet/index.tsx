@@ -10,7 +10,7 @@ function CheckBoxSet({
   return (
     <fieldset className={className}>
       {values.map((v) => (
-        <label key={v} className={styles.checkbox + ' text2 text3-big'}>
+        <label key={v} className={styles.checkbox + ' text3 text2-big'}>
           {v}
         </label>
       ))}

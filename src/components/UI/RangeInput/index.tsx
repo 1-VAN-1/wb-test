@@ -1,10 +1,11 @@
+import { ReactNode } from 'react';
 import styles from './RangeInput.module.scss';
 
-function Container({ label }: { label: string }) {
+function Container({ label, input }: { label: string; input: ReactNode }) {
   return (
     <div className={styles['container']}>
-      <span className={styles['label-text'] + ' text3 text4-big'}>{label}</span>
-      <input className={styles['from-input']} type="text" />
+      <span className={styles['label-text'] + ' text4 text3-big'}>{label}</span>
+      {input}
     </div>
   );
 }
@@ -12,8 +13,14 @@ function Container({ label }: { label: string }) {
 function RangeInput() {
   return (
     <div className={styles['range-input']}>
-      <Container label="От" />
-      <Container label="До" />
+      <Container
+        label="От"
+        input={<input className={styles['from-input']} type="text" />}
+      />
+      <Container
+        label="До"
+        input={<input className={styles['to-input']} type="text" />}
+      />
     </div>
   );
 }

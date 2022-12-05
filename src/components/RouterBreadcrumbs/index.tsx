@@ -7,7 +7,7 @@ function RouterBreadcrumbs() {
     <ul className={styles['router-breadcrumbs']}>
       {categories.map((category) => (
         <li className={styles['breadcrumb-item']} key={category}>
-          <a className="text3 text4-big text5-xs" href="#">
+          <a className="text5 text4-xs text3-big" href="#">
             {category}
           </a>
         </li>

@@ -12,17 +12,17 @@ function Product({ product }: { product: IProduct }) {
         alt={product.title}
       />
       <div className={styles.details}>
-        <div className={styles.price + ' text1 text3-big'}>
+        <div className={styles.price + ' text3 text1-big'}>
           {product.price} $
         </div>
         <div className={styles.title + ' text3'}>{product.title}</div>
         <div className={styles.rating}>
           <div className={`${styles['stars-line']} ${styles[starClass]}`} />
-          <div className={styles['rating-count'] + ' text3 text4-big'}>
+          <div className={styles['rating-count'] + ' text4 text3-big'}>
             {product.rating.count}
           </div>
         </div>
-        <div className={styles.delivery + ' text3 text4-big'}>
+        <div className={styles.delivery + ' text4 text3-big'}>
           Доставка <span className={styles['delivery-date']}>послезавтра</span>
         </div>
         <div className={styles.buttons}>

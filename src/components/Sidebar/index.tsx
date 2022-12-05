@@ -23,7 +23,7 @@ function RadioSetFilter({ radioValues }: { radioValues: string[] }) {
             className={
               `${styles['reset-button']} ${
                 selected !== null ? styles.show : ''
-              }` + ' text3 text4-big'
+              }` + ' text3'
             }
             onClick={(e) => {
               e.stopPropagation();
@@ -57,7 +57,7 @@ function Sidebar() {
   } = useProductFilters();
 
   return (
-    <aside className={styles.sidebar + ' text2 text3-big'}>
+    <aside className={styles.sidebar + ' text3 text2-big'}>
       <CategoryList />
       <div className={styles['filter-list']}>
         <Filter

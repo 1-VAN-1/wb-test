@@ -46,7 +46,7 @@ h1 {
 }
 
 @each $breakpoint-name, $breakpoint-width in $breakpoints {
-  @media (max-width: $breakpoint-width) {
+  @media (min-width: $breakpoint-width) {
     .text1-#{$breakpoint-name} {
       font-size: text-sizes.$f1;
       line-height: text-sizes.$lh1;
@@ -67,50 +67,5 @@ h1 {
       font-size: text-sizes.$f5;
       line-height: text-sizes.$lh5;
     }
-  }
-}
-
-%text-xs {
-  font-size: text-sizes.$f5;
-  line-height: text-sizes.$lh5;
-}
-
-%text-s {
-  font-size: text-sizes.$f4;
-  line-height: text-sizes.$lh4;
-
-  @media (max-width: map.get($breakpoints, big)) {
-    font-size: text-sizes.$f5;
-    line-height: text-sizes.$lh5;
-  }
-}
-
-%text-m {
-  font-size: text-sizes.$f3;
-  line-height: text-sizes.$lh3;
-
-  @media (max-width: map.get($breakpoints, big)) {
-    font-size: text-sizes.$f4;
-    line-height: text-sizes.$lh4;
-  }
-}
-
-%text-l {
-  font-size: text-sizes.$f2;
-  line-height: text-sizes.$lh2;
-
-  @media (max-width: map.get($breakpoints, big)) {
-    font-size: text-sizes.$f3;
-    line-height: text-sizes.$lh3;
-  }
-}
-
-%text-xl {
-  font-size: text-sizes.$f1;
-  line-height: text-sizes.$lh1;
-
-  @media (max-width: map.get($breakpoints, big)) {
-    font-size: text-sizes.$f2;
-    line-height: text-sizes.$lh2;
   }
 }
