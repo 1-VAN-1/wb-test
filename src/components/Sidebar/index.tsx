@@ -6,7 +6,7 @@ import RangeInput from '@/components/UI/RangeInput';
 import CategoryList from './CategoryList';
 import Filter from './Filter';
 import ColorPicker from './ColorPicker';
-import styles from './SideBar.module.scss';
+import styles from './Sidebar.module.scss';
 
 function RadioSetFilter({ radioValues }: { radioValues: string[] }) {
   const [selected, setSelected] = useState<string | number | null>(null);
